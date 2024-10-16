@@ -8,7 +8,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:3000/posts')
+      .get('http://localhost:3000/api/v1/posts')
       .then((response) => {
         setPosts(response.data);
       })
@@ -25,6 +25,7 @@ function App() {
       <div key={post.id}>
         <h1>{post.title}</h1>
         <p>{post.body}</p>
+        <hr />
       </div>
     ))}
    </div>
